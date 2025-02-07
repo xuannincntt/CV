@@ -16,6 +16,14 @@
     --main-color: #0ef;
 }
 
+.sun-mode {
+    --bg-color: #fdfdfd;
+    --second-bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;   
@@ -39,32 +47,38 @@ section {
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.header .sticky {
+.header.sticky {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
-    font-weight: 600;;
+    font-weight: 600;
     cursor:default;
+    margin-right: auto;
 }
 
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-right: 3.5rem;
     transition: .3s;
 }
 
 .navbar a:hover,
 .navbar .active {
     color: var(--main-color);
+}
+
+#sunMode-icon {
+    font-size: 2.4rem;
+    color: var(--white-color);
+    cursor: pointer;
 }
 
 #menu-icon {
@@ -216,13 +230,16 @@ span {
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
     transition: .5s ease;
 }
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
     transform: scale(1.02);
 }
 
@@ -258,7 +275,7 @@ span {
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
     display: flex;
 }
@@ -341,6 +358,7 @@ span {
     font-size: 1.6rem;
     color: var(--text-color);
     background: var(--second-bg-color);
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -365,6 +383,7 @@ span {
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--second-bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
 }
 
 .footer-text p {

@@ -58,3 +58,11 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+/*=========== sun light mode =========== */
+let sunModeIcon = document.querySelector('#sunMode-icon');
+
+sunModeIcon.onclick = () => {
+    sunModeIcon.classList.toggle('bx-moon');
+    document.body.classList.toggle('sun-mode');
+};
